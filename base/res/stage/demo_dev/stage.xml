@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Name of Stage | Use custom tile? (true/false) -->
+<Stage name="demo" custom="true">
+	<!-- List of Tile ID of xxx -->
+	<NonCollision list="1,5,46,56" />
+	<SecretTile list="4,5,7,8,9" />
+	<DamageTile list="40,41,42,43" />
+	<AnimTile name="waterfall" list="50,51,52,53" duration="3" />
+	<AnimTile name="wind1" list="46,47,48,49" duration="3" />
+	<AnimTile name="wind2" list="56,57,58,59" duration="3" />
+
+	<!-- Name of Map and Player Entry Position (Index) -->
+	<!-- dir : (left/right) -->
+	<Start map="one" posx="1" posy="4" />
+
+	<!-- Name of Map | Position | Size -->
+	<Map name="one" posx="0" posy="0" sizex="16" sizey="9">
+		<!-- Item -->
+		<!-- uid : Unique ID (Start from 1) -->
+		<!-- respawn : (true/false[default]) -->
+		<Item name="psmall" posx="3" posy="5" respawn="true" />
+		<Item name="star" posx="2" posy="3" uid="1" />
+		<!-- Enemy -->
+		<!-- respawn : (true[default]/false) -->
+		<Enemy name="bug" posx="2" posy="3" respawn="false" />
+		<Enemy name="cursor" posx="5" posy="4" />
+		<Enemy name="generator001" posx="11" posy="1" />
+		<Enemy name="enemy" posx="6" posy="6" />
+		<!-- Wind -->
+		<!-- dir : (up[default]/down/left/right) -->
+		<!--Wind posx="5" posy="7" dir="up" move="x" speed="5" /-->
+		<!--Wind posx="5" posy="4" dir="left" move="y" speed="5" range="3" /-->
+		<Event name="testTalk" cmd="talk list cmd name" posx="3" posy="6" sizex="1" sizey="2" />
+		<Event name="test2" cmd="talk list cmd name" posx="5" posy="6" sizex="1" sizey="2" />
+		<AutoEvent name="testTalk" cmd="talk list cmd name" posx="10" posy="3" sizex="2" sizey="5" />
+		<AutoEvent name="testTalk2" cmd="talk list cmd name" posx="8" posy="3" sizex="1" sizey="5" />
+	</Map>
+	<Map name="boss" posx="-16" posy="0" sizex="16" sizey="9" />
+	<Joint type="vertical" map1="boss" map2="one" offset1="1" offset2="1" size="7" dir="both" />
+</Stage>

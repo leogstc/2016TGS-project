@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Name of Stage | Use custom tile? (true/false) -->
+<Stage name="demo" custom="true">
+	<!-- List of Tile ID of xxx -->
+	<NonCollision list="1,5,46,47,48,49" />
+	<SecretTile list="4,5,7,8,9" />
+	<DamageTile list="40,41,42,43,46,47,48,49" />
+	<AnimTile name="waterfall" list="50,51,52,53" duration="3" />
+
+	<!-- Name of Map and Player Entry Position (Index) -->
+	<!-- dir : (left/right) -->
+	<Start map="start" posx="1" posy="4" />
+	<Continue map="upper" posx="4" posy="9" />
+	<Continue map="tunnel" posx="11" posy="10" />
+
+	<!-- Name of Map | Position | Size -->
+	<Map name="start" posx="0" posy="12" sizex="22" sizey="12">
+		<Item name="star" posx="5" posy="2" />
+		<Enemy name="generator001" posx="20" posy="4" />
+	</Map>
+	<Map name="goup" posx="22" posy="12" sizex="22" sizey="12">
+		<Wind posx="18" posy="10" dir="up" />
+		<Wind posx="18" posy="6" dir="up" />
+		<Wind posx="1" posy="4" dir="up" move="x" range="13" />
+		<Wind posx="15" posy="4" dir="up" move="x" speed="-5" range="13" />
+		<Wind posx="1" posy="2" dir="up" />
+	</Map>
+	<Map name="upper" posx="22" posy="0" sizex="40" sizey="12">
+		<Item name="chrome" posx="10" posy="2" />
+		<Item name="psmall" posx="8" posy="1" respawn="true" />
+		<Wind posx="11" posy="5" dir="up" />
+		<Wind posx="19" posy="1" dir="right" />
+		<Wind posx="28" posy="1" dir="right" />
+		<Wind posx="37" posy="1" dir="down" />
+	</Map>
+	<Map name="secret" posx="0" posy="0" sizex="22" sizey="12">
+		<Item name="p" posx="4" posy="2" />
+		<Wind posx="6" posy="10" dir="up" move="x" range="7" />
+		<Wind posx="13" posy="10" dir="up" move="x" speed="-10" range="7" />
+		<Wind posx="4" posy="8" dir="up" />
+		<Wind posx="12" posy="5" dir="up" />
+	</Map>
+	<Map name="secret_left" posx="-24" posy="0" sizex="24" sizey="12">
+		<Item name="p" posx="3" posy="4" />
+		<Wind posx="18" posy="3" dir="left" />
+		<Wind posx="11" posy="5" dir="up" />
+		<Wind posx="21" posy="5" dir="right" />
+		<Wind posx="21" posy="6" dir="right" />
+		<Wind posx="20" posy="10" dir="up" />
+		<Wind posx="3" posy="11" dir="up" />
+		<Wind posx="5" posy="5" dir="down" />
+		<Wind posx="8" posy="8" dir="down" />
+		<Wind posx="8" posy="6" dir="up" />
+		<Wind posx="8" posy="7" dir="up" move="x" speed="-4" range="1" />
+	</Map>
+	<Map name="tunnel" posx="62" posy="0" sizex="22" sizey="12" />
+	<Map name="boss" posx="84" posy="0" sizex="22" sizey="12" />
+	<Joint type="vertical" map1="start" map2="goup" offset1="8" offset2="8" size="3" dir="both" />
+	<Joint type="horizontal" map1="goup" map2="upper" offset1="1" offset2="1" size="3" boffset1="0.5" boffset2="0.5" dir="forward" going="lefttop" door="true" />
+	<Joint type="vertical" map1="secret" map2="upper" offset1="2" offset2="2" size="1" dir="both" />
+	<Joint type="vertical" map1="secret_left" map2="secret" offset1="1" offset2="1" size="2" dir="both" />
+	<Joint type="horizontal" map1="secret" map2="start" offset1="1" size="2" dir="forward" />
+	<Joint type="horizontal" map1="secret" map2="start" offset1="14" size="3" dir="forward" />
+	<Joint type="vertical" map1="upper" map2="tunnel" offset1="8" offset2="8" size="3" boffset1="0.5" boffset2="0.5" dir="forward" door="true" />
+	<Joint type="vertical" map1="tunnel" map2="boss" offset1="8" offset2="8" size="3" boffset1="0.5" boffset2="0.5" dir="forward" door="true" />
+</Stage>

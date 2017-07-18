@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Name of Stage | Use custom tile? (true/false) -->
+<Stage name="nomal" custom="true">
+	<!-- List of Tile ID of xxx -->
+	<NonCollision list="5,46,47,48,49,50" />
+	<SecretTile list="4,5,7,8,9" />
+	<DamageTile list="40,41,42,43,46,48,49" />
+	<AnimTile name="waterfall" list="50,51,52,53" duration="3" />
+
+	<!-- Name of Map and Player Entry Position (Index) -->
+	<!-- dir : (left/right) -->
+	<Start map="nomal_first" posx="1" posy="5" />
+	<Continue map="nomal_fifth" posx="10" posy="7" />
+
+	<!-- Name of Map | Position | Size -->
+	<Map name="nomal_first" posx="0" posy="0" sizex="22" sizey="15">
+		
+	</Map>
+	<Map name="nomal_second" posx="22" posy="-5" sizex="40" sizey="20">
+		<Item name="healItem" posx="1" posy="2" />
+		<Item name="healItem" posx="1" posy="17" />
+		<Enemy name="enemy_archer" posx="6" posy="1" />
+		<Enemy name="enemy_archer" posx="9" posy="6" />
+		<Enemy name="enemy_archer" posx="38" posy="8" />
+		<Enemy name="enemy_slime" posx="11" posy="11" />
+		<Enemy name="enemy_slime" posx="16" posy="11" />
+		<Enemy name="enemy_slime" posx="21" posy="11" />
+		<Enemy name="enemy_bat" posx="30" posy="3" />
+		<Enemy name="enemy_bat" posx="37" posy="3" />
+		<Enemy name="enemy_monster" posx="36" posy="10" />
+		<Enemy name="enemy_monster" posx="34" posy="12" />
+	</Map>
+	<Map name="nomal_third" posx="62" posy="-5" sizex="24" sizey="50">
+		<Item name="healItem" posx="22" posy="36" />
+		<Enemy name="enemy_fly" posx="3" posy="3" />
+		<Enemy name="enemy_fly" posx="7" posy="3" />
+		<Enemy name="enemy_fly" posx="17" posy="3" />
+		<Enemy name="enemy_fly" posx="20" posy="3" />
+		<Enemy name="enemy_fly" posx="5" posy="43" />
+		<Enemy name="enemy_fly" posx="18" posy="40" />
+		<Enemy name="enemy_archer" posx="11" posy="15" />
+		<Enemy name="enemy_archer" posx="14" posy="29" />
+		<Enemy name="enemy_archer" posx="16" posy="33" />
+		<Enemy name="enemy_slime" posx="10" posy="20" />
+		<Enemy name="enemy_slime" posx="20" posy="20" />
+		<Enemy name="enemy_slime" posx="5" posy="36" />
+		<Enemy name="enemy_slime" posx="9" posy="36" />
+		<Enemy name="enemy_slime" posx="6" posy="48" />
+		<Enemy name="enemy_slime" posx="18" posy="48" />
+		<Enemy name="enemy_monster" posx="4" posy="14" />
+		<Enemy name="enemy_monster" posx="18" posy="36" />
+		<Enemy name="enemy_bat" posx="9" posy="24" />
+		<Enemy name="enemy_bat" posx="18" posy="24" />
+	</Map>
+	<Map name="nomal_forth" posx="86" posy="-5" sizex="22" sizey="50">
+		<Item name="healItem" posx="7" posy="2" />
+		<Enemy name="enemy_bat" posx="6" posy="10" />
+		<Enemy name="enemy_fly" posx="11" posy="20" />
+		<Enemy name="enemy_fly" posx="17" posy="20" />
+		<Enemy name="enemy_archer" posx="15" posy="26" />
+		<Enemy name="enemy_slime" posx="11" posy="24" />
+	</Map>
+	<Map name="nomal_fifth" posx="108" posy="-5" sizex="22" sizey="14">
+	<Map name="boss" posx="130" posy="-6" sizex="22" sizey="15" />
+		<Enemy name="enemy_boss" posx="16" posy="4" />
+	</Map>
+	<Joint type="vertical" map1="nomal_first" map2="nomal_second" offset1="5" offset2="10" size="6" dir="both" />
+	<Joint type="vertical" map1="nomal_second" map2="nomal_third" offset1="1" offset2="1" size="18" dir="both" />
+	<Joint type="vertical" map1="nomal_third" map2="nomal_forth" offset1="45" offset2="44" size="5" dir="both" />
+	<Joint type="vertical" map1="nomal_forth" map2="nomal_fifth" offset1="6" offset2="6" size="2" boffset1="0.5" boffset2="0.5" dir="forward" door="true" />
+	<Joint type="vertical" map1="nomal_fifth" map2="boss" offset1="6" offset2="7" size="2" boffset1="0.5" boffset2="0.5" dir="forward" door="true" />
+</Stage>

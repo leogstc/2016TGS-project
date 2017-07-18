@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Name of Stage | Use custom tile? (true/false) -->
+<Stage name="demo" custom="true">
+	<!-- List of Tile ID of xxx -->
+	<NonCollision list="5,46,47,56" />
+	<SecretTile list="4,5,7,8,9" />
+	<DamageTile list="40,41,42,43" />
+	<AnimTile name="waterfall" list="50,51,52,53" duration="3" />
+	<AnimTile name="wind1" list="46,47,48,49" duration="3" />
+	<AnimTile name="wind2" list="56,57,58,59" duration="3" />
+
+	<!-- Name of Map and Player Entry Position (Index) -->
+	<!-- dir : (left/right) -->
+	<Start map="twelth" posx="1" posy="5" />
+	<Continue map="sixth" posx="2" posy="6" />
+
+	<!-- Name of Map | Position | Size -->
+	<Map name="first" posx="0" posy="24" sizex="22" sizey="12">
+		<TutorialEvent name="tutorial_movement" cmd="tutorial movement" posx="3" posy="7" sizex="1" sizey="1" />
+	</Map>
+	<Map name="second" posx="22" posy="24" sizex="22" sizey="12">
+		<!-- Enemy -->
+		<!-- respawn : (true[default]/false) -->
+		<TutorialEvent name="tutorial_jump" cmd="tutorial jump" posx="3" posy="7" sizex="1" sizey="1" />
+	</Map>
+	<Map name="third" posx="44" posy="24" sizex="22" sizey="12">
+		<TutorialEvent name="tutorial_fly" cmd="tutorial fly" posx="3" posy="7" sizex="1" sizey="1" />
+	</Map>
+	<Map name="fourth" posx="66" posy="24" sizex="22" sizey="12">
+		<Enemy name="enemy_bat" posx="12" posy="5" />	
+		<TutorialEvent name="tutorial_matk" cmd="tutorial matk" posx="3" posy="7" sizex="1" sizey="1" />
+	</Map>
+	<Map name="fifth" posx="88" posy="24" sizex="22" sizey="12" >
+		<Enemy name="enemy_monster" posx="12" posy="5" />
+		<TutorialEvent name="tutorial_atk" cmd="tutorial atk" posx="3" posy="7" sizex="1" sizey="1" />
+	</Map>
+	<Map name="sixth" posx="110" posy="24" sizex="22" sizey="12">
+		<Enemy name="enemy_bat" posx="12" posy="7" />
+		<Enemy name="enemy_bat" posx="16" posy="7" />
+		<TutorialEvent name="tutorial_enemy" cmd="tutorial enemy" posx="3" posy="7" sizex="1" sizey="1" />
+	</Map>
+	<Map name="seventh" posx="132" posy="24" sizex="22" sizey="12">
+		<Enemy name="enemy_slime" posx="6" posy="7" />
+		<Enemy name="enemy_fly" posx="7" posy="2" />
+		<Enemy name="enemy_slime" posx="19" posy="7" />
+	</Map>
+	<Map name="eighth" posx="154" posy="24" sizex="22" sizey="12">
+		<Enemy name="enemy_archer" posx="8" posy="2" />
+		<Enemy name="enemy_bat" posx="11" posy="2" />
+		<Enemy name="enemy_fly" posx="16" posy="4" />
+	
+	</Map>
+	<Map name="ninth" posx="176" posy="24" sizex="22" sizey="12">
+		<Enemy name="enemy_bat" posx="5" posy="3" />
+		<Enemy name="enemy_slime" posx="7" posy="6" />
+		<Enemy name="enemy_fly" posx="12" posy="2" />
+		<Enemy name="enemy_fly" posx="17" posy="2" />
+		<Enemy name="enemy_slime" posx="16" posy="7" />
+	</Map>
+	<Map name="eleventh" posx="198" posy="-12" sizex="50" sizey="48">
+		<Enemy name="enemy_bat" posx="5" posy="3" />
+		<Enemy name="enemy_slime" posx="7" posy="6" />
+		<Enemy name="enemy_bat" posx="5" posy="8" />
+		<Enemy name="enemy_bat" posx="3" posy="8" />
+		<Enemy name="enemy_slime" posx="16" posy="7" />
+		<Item name="psmall"  posx="13" posy="9" respawn="true"/>
+	</Map>
+
+	<Map name="twelth" posx="198" posy="-12" sizex="72" sizey="24">
+		<Enemy name="enemy_bat" posx="10" posy="2" />
+		<Enemy name="enemy_archer" posx="21" posy="1" />	
+		<Enemy name="enemy_slime" posx="13" posy="11" />
+		<Enemy name="enemy_fly" posx="5" posy="8" />
+		<Enemy name="enemy_fly" posx="3" posy="8" />
+		<Enemy name="enemy_bat" posx="12" posy="14" />
+		<Enemy name="enemy_bat" posx="16" posy="13" />
+		<Enemy name="enemy_archer" posx="57" posy="2" />
+		<Enemy name="enemy_archer" posx="60" posy="1" />
+		<Enemy name="enemy_slime" posx="59" posy="13" />
+		<Enemy name="enemy_slime" posx="52" posy="13" />
+		<Enemy name="enemy_bat" posx="39" posy="10" />
+		<Enemy name="enemy_fly" posx="65" posy="18" />
+		<Enemy name="enemy_slime" posx="61" posy="21" />
+		<Item name="healItem" posx="13" posy="20" respawn="false"/>
+		<Item name="healItem" posx="33" posy="21" respawn="false"/>
+	</Map>
+
+	<Map name="tenth" posx="248" posy="-9" sizex="22" sizey="12">
+		
+	</Map>
+	<Map name="boss" posx="270" posy="24" sizex="22" sizey="12" >
+		<Item name="healItem" posy="5" posx="3" respawn="true"/>
+		<Item name="psmall" posy="5" posx="6" respawn="true"/>
+		<Enemy name="enemy_boss" posx="16" posy="3" />
+	</Map>
+
+	<Joint type="vertical" map1="first" map2="second" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="second" map2="third" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="third" map2="fourth" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="fourth" map2="fifth" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="fifth" map2="sixth" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="sixth" map2="seventh" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="seventh" map2="eighth" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="eighth" map2="ninth" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="ninth" map2="eleventh" offset1="1" offset2="1" size="47" dir="both" />
+	<Joint type="vertical" map1="eleventh" map2="tenth"  offset1="1" offset2="1" size="150" dir="both" />
+	<Joint type="vertical" map1="tenth" map2="boss" offset1="6" offset2="6" size="2" boffset1="0.5" boffset2="0.5" dir="forward" door="true" />
+</Stage>

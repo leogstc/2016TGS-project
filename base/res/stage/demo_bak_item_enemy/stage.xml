@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Name of Stage | Use custom tile? (true/false) -->
+<Stage name="demo" custom="true">
+	<!-- List of Tile ID of xxx -->
+	<NonCollision list="24" />
+	<SecretTile list="23,24" />
+	<DamageTile list="20" />
+
+	<!-- Information -->
+	<!-- Music -->
+	<Music track="bgm01" />
+
+	<!-- Name of Map and Player Entry Position (Index) -->
+	<!-- dir : (left/right) -->
+	<Start map="third" posx="4" posy="4" dir="left" />
+	<Continue map="cont" posx="1" posy="5" />
+
+	<!-- Tunnel before Mid Boss / Boss -->
+	<!-- map value is name of map before boss room -->
+	<!-- dir : (left/right) -->
+	<TunnelMidBoss map="subtunnel" posx="7" posy="5" />
+	<TunnelBoss map="tunnel" posx="7" posy="6" />
+
+	<!-- Boss -->
+	<MidBoss map="midboss" />
+	<Boss map="boss" boss="NO_NAME_MAN" posx="0" posy="0" />
+
+	<!-- Name of Map | Position | Size -->
+	<Map name="first" posx="-9" posy="2" sizex="26" sizey="9" />
+	<Map name="second" posx="17" posy="2" sizex="9" sizey="9" />
+	<Map name="third" posx="26" posy="11" sizex="9" sizey="18">
+		<!-- Item -->
+		<!-- uid : Unique ID (Start from 1) -->
+		<!-- respawn : (true/false[default]) -->
+		<Item name="psmall" posx="3" posy="5" respawn="true" />
+		<Item name="star" posx="2" posy="3" uid="1" />
+		<!-- Enemy -->
+		<!-- respawn : (true[default]/false) -->
+		<Enemy name="bug" posx="2" posy="3" respawn="false" />
+		<Enemy name="cursor" posx="5" posy="4" />
+	</Map>
+	<Map name="cont" posx="26" posy="2" sizex="9" sizey="9">
+		<Item name="p" posx="4" posy="1" />
+		<Item name="chrome" posx="2" posy="3" respawn="true" />
+	</Map>
+	<Map name="tunnel" posx="35" posy="20" sizex="16" sizey="9" />
+	<Map name="boss" posx="51" posy="20" sizex="16" sizey="9" />
+
+	<!-- Joint -->
+	<!-- type : type of joint (vertical/horizontal) -->
+	<!-- map1/map2 : name of joint maps -->
+	<!-- offset : offset from joint position (index) -->
+	<!-- size : size of joint (index) -->
+	<!-- boffset : back offset from joint position (pixel) -->
+	<!-- offset : offset from joint position (index) -->
+	<!-- dir : direction (both/forward) -->
+	<!-- going : direction (lefttop/rightbottom[default]) to calculate position of joint -->
+	<!-- door : is door? (true/false[default]) -->
+	<Joint type="vertical" map1="first" map2="second" offset1="4" offset2="4" size="4" boffset1="0" boffset2="0" dir="both" />
+	<Joint type="vertical" map1="second" map2="cont" offset1="4" offset2="4" size="4" boffset1="0.5" boffset2="0.5" dir="both" />
+	<Joint type="horizontal" map1="cont" map2="third" offset1="5" offset2="5" size="2" boffset1="0.5" boffset2="0.5" dir="both" />
+	<Joint type="vertical" map1="third" map2="tunnel" offset1="14" offset2="5" size="3" boffset1="0.5" boffset2="0.5" dir="both" />
+	<Joint type="vertical" map1="tunnel" map2="boss" offset1="5" offset2="5" size="3" boffset1="0.5" boffset2="0.5" dir="both" />
+</Stage>

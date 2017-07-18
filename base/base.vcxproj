@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0FBFA0C8-D8FA-4A83-8136-E8A4061146AF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>base</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)/include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)/lib/x86;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)\base\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)/include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)/lib/x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\config.cpp" />
+    <ClCompile Include="src\debug\debug.cpp" />
+    <ClCompile Include="src\effect\effectManager.cpp" />
+    <ClCompile Include="src\effect\effect_clear.cpp" />
+    <ClCompile Include="src\effect\effect_fadeInBlack.cpp" />
+    <ClCompile Include="src\effect\effect_fadeOutBlack.cpp" />
+    <ClCompile Include="src\effect\effect_gameOver.cpp" />
+    <ClCompile Include="src\effect\effect_ready.cpp" />
+    <ClCompile Include="src\enemy\bound_object.cpp" />
+    <ClCompile Include="src\enemy\enemy_archer.cpp" />
+    <ClCompile Include="src\enemy\enemy_arrow.cpp" />
+    <ClCompile Include="src\enemy\enemy_bat.cpp" />
+    <ClCompile Include="src\enemy\enemy_boss.cpp" />
+    <ClCompile Include="src\enemy\enemy_boss_shot.cpp" />
+    <ClCompile Include="src\enemy\enemy_fly.cpp" />
+    <ClCompile Include="src\enemy\enemyBase.cpp" />
+    <ClCompile Include="src\enemy\enemyManager.cpp" />
+    <ClCompile Include="src\enemy\enemy_mine.cpp" />
+    <ClCompile Include="src\enemy\enemy_monster.cpp" />
+    <ClCompile Include="src\enemy\enemy_shot.cpp" />
+    <ClCompile Include="src\enemy\enemy_slime.cpp" />
+    <ClCompile Include="src\enemy\mine_navi.cpp" />
+    <ClCompile Include="src\event\eventTutorial.cpp" />
+    <ClCompile Include="src\event\stageEventManager.cpp" />
+    <ClCompile Include="src\event\worldEventManager.cpp" />
+    <ClCompile Include="src\item\itemBase.cpp" />
+    <ClCompile Include="src\item\itemManager.cpp" />
+    <ClCompile Include="src\lib\easing.cpp" />
+    <ClCompile Include="src\lib\effect.cpp" />
+    <ClCompile Include="src\lib\gplib.cpp" />
+    <ClCompile Include="src\lib\objectbase.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\map_object\wind.cpp" />
+    <ClCompile Include="src\map_object\windManager.cpp" />
+    <ClCompile Include="src\menu\menuEllipse.cpp" />
+    <ClCompile Include="src\menu\menuItem_playerStatus.cpp" />
+    <ClCompile Include="src\menu\menuLeftRightBase.cpp" />
+    <ClCompile Include="src\menu\menuUpDownBase.cpp" />
+    <ClCompile Include="src\object\mapCollisionObj.cpp" />
+    <ClCompile Include="src\object\root.cpp" />
+    <ClCompile Include="src\player\mover.cpp" />
+    <ClCompile Include="src\player\player.cpp" />
+    <ClCompile Include="src\player\shot.cpp" />
+    <ClCompile Include="src\player\ShotBase.cpp" />
+    <ClCompile Include="src\scene\end.cpp" />
+    <ClCompile Include="src\scene\loading.cpp" />
+    <ClCompile Include="src\scene\stageSelect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\stage\jointDoor.cpp" />
+    <ClCompile Include="src\stage\map.cpp" />
+    <ClCompile Include="src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\title\backTree.cpp" />
+    <ClCompile Include="src\title\cloud.cpp" />
+    <ClCompile Include="src\title\pleaseText.cpp" />
+    <ClCompile Include="src\title\titleObj.cpp" />
+    <ClCompile Include="src\title\tree.cpp" />
+    <ClCompile Include="src\ui\bossUiHPBar.cpp" />
+    <ClCompile Include="src\ui\bossUiHPFrame.cpp" />
+    <ClCompile Include="src\ui\uiAvatar.cpp" />
+    <ClCompile Include="src\ui\uiHPBar.cpp" />
+    <ClCompile Include="src\ui\uiHPFrame.cpp" />
+    <ClCompile Include="src\ui\uiLife.cpp" />
+    <ClCompile Include="src\ui\uiManager.cpp" />
+    <ClCompile Include="src\ui\uiMPBar.cpp" />
+    <ClCompile Include="src\ui\uiMPFrame.cpp" />
+    <ClCompile Include="src\ui\ui_loading.cpp" />
+    <ClCompile Include="src\util\timer.cpp" />
+    <ClCompile Include="src\util\util_wstringConvert.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\config.h" />
+    <ClInclude Include="src\debug\debug.h" />
+    <ClInclude Include="src\effect\effectBase.h" />
+    <ClInclude Include="src\effect\effectManager.h" />
+    <ClInclude Include="src\effect\effect_clear.h" />
+    <ClInclude Include="src\effect\effect_fadeInBlack.h" />
+    <ClInclude Include="src\effect\effect_fadeOutBlack.h" />
+    <ClInclude Include="src\effect\effect_gameOver.h" />
+    <ClInclude Include="src\effect\effect_gilgamesh.hpp" />
+    <ClInclude Include="src\effect\effect_mahoujin.hpp" />
+    <ClInclude Include="src\effect\effect_popstar.hpp" />
+    <ClInclude Include="src\effect\effect_ready.h" />
+    <ClInclude Include="src\enemy\bound_object.h" />
+    <ClInclude Include="src\enemy\enemy_archer.h" />
+    <ClInclude Include="src\enemy\enemy_arrow.h" />
+    <ClInclude Include="src\enemy\enemy_bat.h" />
+    <ClInclude Include="src\enemy\enemy_boss.h" />
+    <ClInclude Include="src\enemy\enemy_boss_shot.h" />
+    <ClInclude Include="src\enemy\enemy_fly.h" />
+    <ClInclude Include="src\enemy\enemyBase.h" />
+    <ClInclude Include="src\enemy\enemyManager.h" />
+    <ClInclude Include="src\enemy\enemy_mine.h" />
+    <ClInclude Include="src\enemy\enemy_monster.h" />
+    <ClInclude Include="src\enemy\enemy_shot.h" />
+    <ClInclude Include="src\enemy\enemy_slime.h" />
+    <ClInclude Include="src\enemy\mask.hpp" />
+    <ClInclude Include="src\enemy\mine_navi.h" />
+    <ClInclude Include="src\event\eventTalk.hpp" />
+    <ClInclude Include="src\event\eventTutorial.h" />
+    <ClInclude Include="src\event\stageAutoEventArea.hpp" />
+    <ClInclude Include="src\event\eventBase.h" />
+    <ClInclude Include="src\event\stageEventArea.hpp" />
+    <ClInclude Include="src\event\stageEventManager.h" />
+    <ClInclude Include="src\event\stageTutorialEventArea.hpp" />
+    <ClInclude Include="src\event\worldEventManager.h" />
+    <ClInclude Include="src\gameFlag.hpp" />
+    <ClInclude Include="src\io\iniReader.hpp" />
+    <ClInclude Include="src\io\stageReader.hpp" />
+    <ClInclude Include="src\io\xml.h" />
+    <ClInclude Include="src\io\xmlReader.hpp" />
+    <ClInclude Include="src\item\itemBase.h" />
+    <ClInclude Include="src\item\itemManager.h" />
+    <ClInclude Include="src\item\item_sample.hpp" />
+    <ClInclude Include="src\lib\ci_ext\object.hpp" />
+    <ClInclude Include="src\lib\easing.h" />
+    <ClInclude Include="src\lib\effect.h" />
+    <ClInclude Include="src\lib\gplib.h" />
+    <ClInclude Include="src\lib\lib_Window.hpp" />
+    <ClInclude Include="src\lib\lib_windowDx.hpp" />
+    <ClInclude Include="src\lib\objectbase.h" />
+    <ClInclude Include="src\lib\xinput.h" />
+    <ClInclude Include="src\map_object\wind.h" />
+    <ClInclude Include="src\map_object\windManager.h" />
+    <ClInclude Include="src\menu\menuEllipse.h" />
+    <ClInclude Include="src\menu\menuItem_playerStatus.h" />
+    <ClInclude Include="src\menu\menuLeftRightBase.h" />
+    <ClInclude Include="src\menu\menuStageSelect.hpp" />
+    <ClInclude Include="src\menu\menuUdTest.hpp" />
+    <ClInclude Include="src\menu\menuUpDownBase.h" />
+    <ClInclude Include="src\menu\optionBase.hpp" />
+    <ClInclude Include="src\object\animation.hpp" />
+    <ClInclude Include="src\object\mapCollisionObj.h" />
+    <ClInclude Include="src\object\MenuButton.hpp" />
+    <ClInclude Include="src\object\movableObject.hpp" />
+    <ClInclude Include="src\object\root.h" />
+    <ClInclude Include="src\player\mover.h" />
+    <ClInclude Include="src\player\player.h" />
+    <ClInclude Include="src\player\playerInfo.hpp" />
+    <ClInclude Include="src\player\shot.h" />
+    <ClInclude Include="src\player\ShotBase.h" />
+    <ClInclude Include="src\scene\end.h" />
+    <ClInclude Include="src\scene\gameOver.hpp" />
+    <ClInclude Include="src\scene\loading.h" />
+    <ClInclude Include="src\scene\Logo.hpp" />
+    <ClInclude Include="src\scene\stage.hpp" />
+    <ClInclude Include="src\scene\stageSelect.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\scene\Title.hpp" />
+    <ClInclude Include="src\stage\bg_digitalLine.hpp" />
+    <ClInclude Include="src\stage\bg_fallingLeaves.hpp" />
+    <ClInclude Include="src\stage\bg_star.hpp" />
+    <ClInclude Include="src\stage\camera.h" />
+    <ClInclude Include="src\stage\jointDoor.h" />
+    <ClInclude Include="src\stage\map.h" />
+    <ClInclude Include="src\stage\stageFlag.hpp" />
+    <ClInclude Include="src\stage\stageInfo.h" />
+    <ClInclude Include="src\stdafx.h" />
+    <ClInclude Include="src\title\backTree.h" />
+    <ClInclude Include="src\title\cloud.h" />
+    <ClInclude Include="src\title\pleaseText.h" />
+    <ClInclude Include="src\title\titleObj.h" />
+    <ClInclude Include="src\title\tree.h" />
+    <ClInclude Include="src\ui\bossUiHPBar.h" />
+    <ClInclude Include="src\ui\bossUiHPFrame.h" />
+    <ClInclude Include="src\ui\uiAvatar.h" />
+    <ClInclude Include="src\ui\uiBase.h" />
+    <ClInclude Include="src\ui\uiHPBar.h" />
+    <ClInclude Include="src\ui\uiHPFrame.h" />
+    <ClInclude Include="src\ui\uiLife.h" />
+    <ClInclude Include="src\ui\uiManager.h" />
+    <ClInclude Include="src\ui\uiMPBar.h" />
+    <ClInclude Include="src\ui\uiMPFrame.h" />
+    <ClInclude Include="src\ui\ui_loading.h" />
+    <ClInclude Include="src\ui\ui_marquee.hpp" />
+    <ClInclude Include="src\util\timer.h" />
+    <ClInclude Include="src\util\util_stopVibrate.hpp" />
+    <ClInclude Include="src\util\util_wstringConvert.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

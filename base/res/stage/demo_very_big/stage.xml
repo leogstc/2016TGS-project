@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Name of Stage | Use custom tile? (true/false) -->
+<Stage name="demo" custom="true">
+	<!-- List of Tile ID of xxx -->
+	<NonCollision list="1,5" />
+	<SecretTile list="4,5,7,8,9" />
+	<DamageTile list="40,41,42,43" />
+	<AnimTile name="waterfall" list="50,51,52,53" duration="3" />
+
+	<!-- Name of Map and Player Entry Position (Index) -->
+	<!-- dir : (left/right) -->
+	<Start map="test" posx="3" posy="2" />
+
+	<!-- Name of Map | Position | Size -->
+	<Map name="test" posx="0" posy="0" sizex="100" sizey="50">
+		<!-- Item -->
+		<!-- uid : Unique ID (Start from 1) -->
+		<!-- respawn : (true/false[default]) -->
+		<Item name="psmall" posx="3" posy="5" respawn="true" />
+		<Item name="star" posx="2" posy="3" uid="1" />
+		<!-- Enemy -->
+		<!-- respawn : (true[default]/false) -->
+		<Enemy name="bug" posx="2" posy="3" respawn="false" />
+		<Enemy name="cursor" posx="5" posy="4" />
+	</Map>
+</Stage>

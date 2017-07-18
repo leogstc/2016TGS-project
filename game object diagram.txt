@@ -1,0 +1,43 @@
+root
+|-> scene_title
+|
+|-> scene_loading
+|
+|-> player_info (hp/life/etc.)[create @ stage.cpp]
+|-> game_flag (unique item/stage clear/etc. flag) [create @ stage.cpp]
+|-> world_event_manager [create @ stage.cpp]
+|	|-> event_xxx
+|-> scene_stage_select
+|	|-> menu_stage_select
+|-> scene_stage_xxx
+	|-> stage_flag (continue/boss tunnel/respawn flag) [create @ map.cpp]
+	|-> map [create @ stage.cpp]
+		|-> bg_<name> [create @ map.cpp]
+		|-> joint_door_<id> [create @ map.cpp]
+		|-> player [create @ map.cpp]
+		|	|-> shot
+		|-> player_dead [create @ player.cpp]
+		|	|-> player_dead_<degree>
+		|-> item_manager [create @ map.cpp]
+		|	|-> item_001
+		|	|-> item_xxx
+		|-> enemy_manager [create @ map.cpp]
+		|	|-> enemy_bug
+		|	|-> enemy_slimeGenerator -„¢ create
+		|	|-> enemy_orangeSlime <---„£
+		|	|-> enemy_xxx
+		|-> effect_manager [create @ map.cpp]
+		|	|-> effect_mahoujin
+		|	|-> effect_clear
+		|	|-> effect_ready
+		|	|-> effect_xxx
+		|-> wind_manager [create @ map.cpp]
+		|	|-> wind
+		|-> stage_event_manager [create @ map.cpp]
+			|-> auto_event_area_xxx
+			|-> event_area_xxx
+
+
+???
+|-> menu_pauseGame
+	|-> menu_itemXXX

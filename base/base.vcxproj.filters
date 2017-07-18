@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\config.cpp" />
+    <ClCompile Include="src\util\util_wstringConvert.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\debug\debug.cpp">
+      <Filter>Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\object\mapCollisionObj.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="src\object\root.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\player.cpp">
+      <Filter>In Game\player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stage\jointDoor.cpp">
+      <Filter>In Game\map</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\menuEllipse.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\gplib.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\menuLeftRightBase.cpp">
+      <Filter>Menu\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\menuUpDownBase.cpp">
+      <Filter>Menu\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\item\itemBase.cpp">
+      <Filter>In Game\item</Filter>
+    </ClCompile>
+    <ClCompile Include="src\item\itemManager.cpp">
+      <Filter>In Game\item</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\enemyBase.cpp">
+      <Filter>In Game\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\enemyManager.cpp">
+      <Filter>In Game\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\effect\effectManager.cpp">
+      <Filter>In Game\effect</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\menuItem_playerStatus.cpp">
+      <Filter>Menu\items</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\shot.cpp">
+      <Filter>In Game\player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\map_object\windManager.cpp">
+      <Filter>In Game\object\wind</Filter>
+    </ClCompile>
+    <ClCompile Include="src\map_object\wind.cpp">
+      <Filter>In Game\object\wind</Filter>
+    </ClCompile>
+    <ClCompile Include="src\event\worldEventManager.cpp">
+      <Filter>Event %28World%29</Filter>
+    </ClCompile>
+    <ClCompile Include="src\event\stageEventManager.cpp">
+      <Filter>In Game\event</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\stageSelect.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\effect\effect_clear.cpp">
+      <Filter>In Game\effect\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\effect\effect_ready.cpp">
+      <Filter>In Game\effect\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\loading.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\ShotBase.cpp">
+      <Filter>In Game\player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\timer.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\enemy_fly.cpp">
+      <Filter>In Game\enemy\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\ui_loading.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\uiAvatar.cpp">
+      <Filter>UI\Player UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\uiHPBar.cpp">
+      <Filter>UI\Player UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\uiHPFrame.cpp">
+      <Filter>UI\Player UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\uiManager.cpp">
+      <Filter>UI\Player UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\uiMPBar.cpp">
+      <Filter>UI\Player UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\uiMPFrame.cpp">
+      <Filter>UI\Player UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\mover.cpp" />
+    <ClCompile Include="src\enemy\bound_object.cpp">
+      <Filter>In Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\enemy_archer.cpp">
+      <Filter>In Game\enemy\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\enemy_monster.cpp">
+      <Filter>In Game\enemy\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\enemy_slime.cpp">
+      <Filter>In Game\enemy\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\mine_navi.cpp">
+      <Filter>In Game\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\enemy_mine.cpp">
+      <Filter>In Game\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\event\eventTutorial.cpp">
+      <Filter>In Game\event</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\enemy_arrow.cpp">
+      <Filter>In Game\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\enemy_bat.cpp">
+      <Filter>In Game\enemy\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\enemy_shot.cpp">
+      <Filter>In Game\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\enemy_boss.cpp">
+      <Filter>In Game\enemy\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\enemy\enemy_boss_shot.cpp">
+      <Filter>In Game\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\title\backTree.cpp">
+      <Filter>Scene\title</Filter>
+    </ClCompile>
+    <ClCompile Include="src\title\cloud.cpp">
+      <Filter>Scene\title</Filter>
+    </ClCompile>
+    <ClCompile Include="src\title\titleObj.cpp">
+      <Filter>Scene\title</Filter>
+    </ClCompile>
+    <ClCompile Include="src\title\tree.cpp">
+      <Filter>Scene\title</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stage\map.cpp">
+      <Filter>In Game\map</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp" />
+    <ClCompile Include="src\ui\bossUiHPBar.cpp">
+      <Filter>UI\Boss UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\bossUiHPFrame.cpp">
+      <Filter>UI\Boss UI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\effect\effect_gameOver.cpp">
+      <Filter>In Game\effect\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\easing.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\effect.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lib\objectbase.cpp">
+      <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="src\effect\effect_fadeInBlack.cpp">
+      <Filter>In Game\effect\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\effect\effect_fadeOutBlack.cpp">
+      <Filter>In Game\effect\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\title\pleaseText.cpp">
+      <Filter>Scene\title</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\end.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\uiLife.cpp">
+      <Filter>UI\Player UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\config.h" />
+    <ClInclude Include="src\util\util_wstringConvert.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io\stageReader.hpp">
+      <Filter>I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io\iniReader.hpp">
+      <Filter>I/O\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io\xmlReader.hpp">
+      <Filter>I/O\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="src\debug\debug.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameFlag.hpp">
+      <Filter>In Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\Logo.hpp">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object\animation.hpp">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object\mapCollisionObj.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object\MenuButton.hpp">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object\movableObject.hpp">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object\root.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\player.h">
+      <Filter>In Game\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\playerInfo.hpp">
+      <Filter>In Game\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stage\camera.h">
+      <Filter>In Game\map</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stage\jointDoor.h">
+      <Filter>In Game\map</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stage\map.h">
+      <Filter>In Game\map</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stage\stageFlag.hpp">
+      <Filter>In Game\map</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\lib_Window.hpp">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\lib_windowDx.hpp">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\menuEllipse.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\gplib.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\optionBase.hpp">
+      <Filter>Menu\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\menuLeftRightBase.h">
+      <Filter>Menu\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\menuUpDownBase.h">
+      <Filter>Menu\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\menuUdTest.hpp">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stage\bg_star.hpp">
+      <Filter>In Game\map\bg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\item\itemBase.h">
+      <Filter>In Game\item</Filter>
+    </ClInclude>
+    <ClInclude Include="src\item\itemManager.h">
+      <Filter>In Game\item</Filter>
+    </ClInclude>
+    <ClInclude Include="src\item\item_sample.hpp">
+      <Filter>In Game\item\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\enemyBase.h">
+      <Filter>In Game\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\enemyManager.h">
+      <Filter>In Game\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\effect\effectBase.h">
+      <Filter>In Game\effect</Filter>
+    </ClInclude>
+    <ClInclude Include="src\effect\effectManager.h">
+      <Filter>In Game\effect</Filter>
+    </ClInclude>
+    <ClInclude Include="src\effect\effect_mahoujin.hpp">
+      <Filter>In Game\effect\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\menuItem_playerStatus.h">
+      <Filter>Menu\items</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\shot.h">
+      <Filter>In Game\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\map_object\windManager.h">
+      <Filter>In Game\object\wind</Filter>
+    </ClInclude>
+    <ClInclude Include="src\map_object\wind.h">
+      <Filter>In Game\object\wind</Filter>
+    </ClInclude>
+    <ClInclude Include="src\event\eventBase.h">
+      <Filter>Event %28World%29</Filter>
+    </ClInclude>
+    <ClInclude Include="src\event\worldEventManager.h">
+      <Filter>Event %28World%29</Filter>
+    </ClInclude>
+    <ClInclude Include="src\event\stageEventManager.h">
+      <Filter>In Game\event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\event\stageAutoEventArea.hpp">
+      <Filter>In Game\event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\event\stageEventArea.hpp">
+      <Filter>In Game\event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\event\eventTalk.hpp">
+      <Filter>Event %28World%29</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\stage.hpp">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\stageSelect.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\menuStageSelect.hpp">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\effect\effect_clear.h">
+      <Filter>In Game\effect\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\effect\effect_ready.h">
+      <Filter>In Game\effect\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\ci_ext\object.hpp">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\ui_marquee.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\loading.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stage\bg_fallingLeaves.hpp">
+      <Filter>In Game\map\bg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stage\bg_digitalLine.hpp">
+      <Filter>In Game\map\bg</Filter>
+    </ClInclude>
+    <ClInclude Include="src\io\xml.h">
+      <Filter>I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stage\stageInfo.h">
+      <Filter>In Game\map</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\ShotBase.h">
+      <Filter>In Game\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\timer.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\enemy_fly.h">
+      <Filter>In Game\enemy\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\ui_loading.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\uiAvatar.h">
+      <Filter>UI\Player UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\uiBase.h">
+      <Filter>UI\Player UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\uiHPBar.h">
+      <Filter>UI\Player UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\uiHPFrame.h">
+      <Filter>UI\Player UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\uiManager.h">
+      <Filter>UI\Player UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\uiMPBar.h">
+      <Filter>UI\Player UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\uiMPFrame.h">
+      <Filter>UI\Player UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\mover.h" />
+    <ClInclude Include="src\util\util_stopVibrate.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\xinput.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\bound_object.h">
+      <Filter>In Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\enemy_archer.h">
+      <Filter>In Game\enemy\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\enemy_monster.h">
+      <Filter>In Game\enemy\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\enemy_slime.h">
+      <Filter>In Game\enemy\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\mine_navi.h">
+      <Filter>In Game\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\enemy_mine.h">
+      <Filter>In Game\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\event\eventTutorial.h">
+      <Filter>In Game\event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\enemy_arrow.h">
+      <Filter>In Game\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\enemy_bat.h">
+      <Filter>In Game\enemy\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\enemy_shot.h">
+      <Filter>In Game\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\mask.hpp">
+      <Filter>In Game\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\enemy_boss.h">
+      <Filter>In Game\enemy\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\enemy\enemy_boss_shot.h">
+      <Filter>In Game\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\title\backTree.h">
+      <Filter>Scene\title</Filter>
+    </ClInclude>
+    <ClInclude Include="src\title\cloud.h">
+      <Filter>Scene\title</Filter>
+    </ClInclude>
+    <ClInclude Include="src\title\titleObj.h">
+      <Filter>Scene\title</Filter>
+    </ClInclude>
+    <ClInclude Include="src\title\tree.h">
+      <Filter>Scene\title</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\Title.hpp">
+      <Filter>Scene\title</Filter>
+    </ClInclude>
+    <ClInclude Include="src\event\stageTutorialEventArea.hpp">
+      <Filter>In Game\event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\effect\effect_gilgamesh.hpp">
+      <Filter>In Game\effect\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stdafx.h" />
+    <ClInclude Include="src\ui\bossUiHPBar.h">
+      <Filter>UI\Boss UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\bossUiHPFrame.h">
+      <Filter>UI\Boss UI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\effect\effect_gameOver.h">
+      <Filter>In Game\effect\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\gameOver.hpp">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\effect\effect_popstar.hpp">
+      <Filter>In Game\effect\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\easing.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\effect.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lib\objectbase.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\effect\effect_fadeInBlack.h">
+      <Filter>In Game\effect\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\effect\effect_fadeOutBlack.h">
+      <Filter>In Game\effect\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\title\pleaseText.h">
+      <Filter>Scene\title</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\end.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ui\uiLife.h">
+      <Filter>UI\Player UI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="In Game">
+      <UniqueIdentifier>{244eb4a8-dbd0-4f75-914f-395e35839561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In Game\player">
+      <UniqueIdentifier>{e19625ec-7ce8-4d75-ba9e-dacc9f3d8297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In Game\map">
+      <UniqueIdentifier>{0e572c1a-817c-4ab9-b51b-b21bfb172185}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{e4dc6119-da56-4b01-b52b-283f6f723c25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{3cc098e1-6f71-476a-8801-96ac5bb169b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="I/O">
+      <UniqueIdentifier>{b41ec377-1b3e-4866-95bf-389f5721715e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="I/O\Sample">
+      <UniqueIdentifier>{4a3d28b7-de25-472f-a47f-ec646cf6a16a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debug">
+      <UniqueIdentifier>{6d4fbdde-3308-4ea1-83de-bc44d968a3a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{08c15840-29f2-4a9c-b3b4-911d50a8c239}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{683854b9-2e64-4525-83bf-667d5a558e94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In Game\item">
+      <UniqueIdentifier>{f1ddcdb8-2f13-4318-b6b2-6c454f15c6dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In Game\enemy">
+      <UniqueIdentifier>{52cae4c5-a10b-4699-8da2-da6d16226cfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{80b36e53-59ff-4348-9048-4a878447d03e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\Base">
+      <UniqueIdentifier>{0ee5b7e7-b405-4c3a-8476-21ddc183cbde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu\items">
+      <UniqueIdentifier>{68b356c4-b8d5-4122-8baa-2c127dc0213d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In Game\map\bg">
+      <UniqueIdentifier>{1b3e6b3b-f539-4a89-9e07-47e05be7acd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In Game\effect">
+      <UniqueIdentifier>{784e1b2a-9617-46bc-bee4-dd64f2fad4d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In Game\item\entities">
+      <UniqueIdentifier>{c0187b4b-133d-477c-9f0e-63920e547ecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In Game\enemy\entities">
+      <UniqueIdentifier>{b66ac44f-dfbe-4901-ba87-a8a2805254c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In Game\effect\entities">
+      <UniqueIdentifier>{11b870dc-136c-4b40-bc63-b2bdea06c223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{1712b2f7-4092-4bbc-91e6-5383dbc28a8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In Game\object">
+      <UniqueIdentifier>{3b406eb7-9d21-4b96-ab94-8d4b6979e1ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In Game\object\wind">
+      <UniqueIdentifier>{efe5551a-9718-4157-9751-6ef3cfd9fbdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Event %28World%29">
+      <UniqueIdentifier>{bbbcd5f8-341c-4656-88cb-c0d6905f4cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="In Game\event">
+      <UniqueIdentifier>{28737178-9f89-4386-ae55-5dc43360e645}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Player UI">
+      <UniqueIdentifier>{6e3b5cad-556c-44c0-a527-e6ff71169a9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\title">
+      <UniqueIdentifier>{f64222d1-8c18-44e8-9f01-fe74700ca33e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Boss UI">
+      <UniqueIdentifier>{f6e24e33-58c3-49f2-8361-948e6bf7bab4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

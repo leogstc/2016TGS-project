@@ -1,0 +1,60 @@
+mapName first
+{
+resName_JP tutorial_movement_jp
+resName_EN tutorial_movement_en
+src_jp_x 368.0
+src_jp_y 72.0
+src_en_x 397.0
+src_en_y 51.0
+}
+
+mapName second
+{
+resName_JP tutorial_jump_jp
+resName_EN tutorial_jump_en
+src_jp_x 289.0
+src_jp_y 69.0
+src_en_x 138.0
+src_en_y 51.0
+}
+
+mapName third
+{
+resName_JP tutorial_fly_jp
+resName_EN tutorial_fly_en
+src_jp_x 1678.0
+src_jp_y 74.0
+src_en_x 1370.0
+src_en_y 59.0
+}
+
+mapName fourth
+{
+resName_JP tutorial_matk_jp
+resName_EN tutorial_matk_en
+src_jp_x 363.0
+src_jp_y 75.0
+src_en_x 288.0
+src_en_y 55.0
+}
+
+mapName fifth
+{
+resName_JP tutorial_melee_atk_jp
+resName_EN tutorial_melee_atk_en
+src_jp_x 302.0
+src_jp_y 75.0
+src_en_x 280.0
+src_en_y 51.0
+}
+
+mapName sixth
+{
+resName_JP tutorial_enemy_jp
+resName_EN tutorial_enemy_en
+src_jp_x 1293.0
+src_jp_y 75.0
+src_en_x 1657.0
+src_en_y 55.0
+}
+

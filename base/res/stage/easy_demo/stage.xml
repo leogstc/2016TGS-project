@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Name of Stage | Use custom tile? (true/false) -->
+<Stage name="easy_demo" custom="true" demo="true">
+	<!-- List of Tile ID of xxx -->
+	<NonCollision list="1,5,46,47,56" />
+	<SecretTile list="4,5,7,8,9" />
+	<DamageTile list="40,41,42,43" />
+	<AnimTile name="waterfall" list="50,51,52,53" duration="3" />
+	<AnimTile name="wind1" list="46,47,48,49" duration="3" />
+	<AnimTile name="wind2" list="56,57,58,59" duration="3" />
+
+	<!-- Name of Map and Player Entry Position (Index) -->
+	<!-- dir : (left/right) -->
+	<Start map="first" posx="1" posy="5" />
+	<Continue map="sixth" posx="2" posy="6" />
+
+	<!-- Name of Map | Position | Size -->
+	<Map name="first" posx="0" posy="24" sizex="22" sizey="12">
+		<TutorialEvent name="tutorial_movement" cmd="tutorial movement" posx="3" posy="7" sizex="1" sizey="1" />
+	</Map>
+	<Map name="second" posx="22" posy="24" sizex="22" sizey="12">
+		<!-- Enemy -->
+		<!-- respawn : (true[default]/false) -->
+		<TutorialEvent name="tutorial_jump" cmd="tutorial jump" posx="3" posy="7" sizex="1" sizey="1" />
+	</Map>
+	<Map name="third" posx="44" posy="24" sizex="22" sizey="12">
+		<TutorialEvent name="tutorial_fly" cmd="tutorial fly" posx="3" posy="7" sizex="1" sizey="1" />
+	</Map>
+	<Map name="fourth" posx="66" posy="24" sizex="22" sizey="12">
+		<Enemy name="enemy_bat" posx="12" posy="5" />	
+		<TutorialEvent name="tutorial_matk" cmd="tutorial matk" posx="3" posy="7" sizex="1" sizey="1" />
+	</Map>
+	<Map name="sixth" posx="88" posy="24" sizex="22" sizey="12">
+		<Enemy name="enemy_bat" posx="12" posy="7" />
+		<Enemy name="enemy_bat" posx="16" posy="7" />
+		<TutorialEvent name="tutorial_enemy" cmd="tutorial enemy" posx="3" posy="7" sizex="1" sizey="1" />
+	</Map>
+	<Map name="seventh" posx="110" posy="24" sizex="22" sizey="12">
+		<Enemy name="enemy_slime" posx="6" posy="7" />
+		<Enemy name="enemy_slime" posx="19" posy="7" />
+	</Map>
+	<Map name="eighth" posx="132" posy="24" sizex="22" sizey="12">
+		<Enemy name="enemy_archer" posx="8" posy="2" />
+		<Enemy name="enemy_fly" posx="16" posy="4" />
+	
+	</Map>
+	<Map name="ninth" posx="154" posy="24" sizex="22" sizey="12">
+		<Enemy name="enemy_slime" posx="7" posy="6" />
+		<Enemy name="enemy_fly" posx="14" posy="2" />
+		<Enemy name="enemy_slime" posx="16" posy="7" />
+	</Map>
+	<Map name="tenth" posx="176" posy="24" sizex="22" sizey="12">
+
+	</Map>
+	<Map name="boss" posx="198" posy="24" sizex="22" sizey="12" >
+		<Enemy name="enemy_boss" posx="16" posy="3" />
+	</Map>
+
+	<Joint type="vertical" map1="first" map2="second" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="second" map2="third" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="third" map2="fourth" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="fourth" map2="sixth" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="sixth" map2="seventh" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="seventh" map2="eighth" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="eighth" map2="ninth" offset1="1" offset2="1" size="6" dir="both" />
+	<Joint type="vertical" map1="ninth" map2="tenth" offset1="6" offset2="6" size="2" boffset1="0.5" boffset2="0.5" dir="forward" door="true" />
+	<Joint type="vertical" map1="tenth" map2="boss" offset1="6" offset2="6" size="2" boffset1="0.5" boffset2="0.5" dir="forward" door="true" />
+</Stage>
